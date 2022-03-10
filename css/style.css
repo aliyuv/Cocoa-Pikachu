@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*::after,*::before{box-sizing: border-box}
+body{
+    font-size: 100px;
+    background: #FFE600;
+}
+
+#pikachu{
+    border: 1px solid red;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 4em;
+    height: 4em;
+    transform: translateX(-50%) translateY(-50%);
+}
+.eye{
+    width: .8em;
+    height: .8em;
+    background-color:#2e2e2e;
+    border: 0.02em solid #000;
+    border-radius: 50%;
+}
+
+.eye.left,
+.eye.right{
+    position: absolute;
+    top: 1.2em;
+}
+.eye.left:before,
+.eye.right:before{
+    content: "";
+    width: .35em;
+    height: .35em;
+    display: block;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 0.02em;
+    left: 0.1em;
+}
+.eye.left{
+    left:0;
+}
+.eye.right{
+    right: 0;
+}
+.nose{
+    border: 0.01em solid #000;
+    background-color: black;
+    border-radius: 10em 2em 2em 0;
+    width: .3em;
+    height: .3em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) rotateZ(43deg) ;
+    transform-origin: center;
+}
+.mouth{
+    width: 2.28em;
+    height: 1.8em;
+    position: relative;
+    top: 2.8em;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 50%;
+}
+.mouth:before,
+.mouth:after{
+    width: 0.8em;
+    height: 0.25em;
+    content: "";
+    display: block;
+    position: absolute;
+    border: 0.03em solid #000000;
+
+}
+.mouth:before{
+    left: 0.35em;
+    top: 0.5em;
+    border-bottom-left-radius: 0.6em 0.3em;
+    border-top-style: none;
+    border-right-style: none;
+    transform: rotate(-25deg);
+}
+.mouth:after{
+    right: 0.34em;
+    top: 0.5em;
+    border-bottom-right-radius: 0.6em 0.3em;
+    border-top-style: none;
+    border-left-style: none;
+    transform:rotate(25deg) ;
+
+}
+.mouth>div{
+    width: 2em;
+    height: 3em;
+    border: 1px solid #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.face{}
