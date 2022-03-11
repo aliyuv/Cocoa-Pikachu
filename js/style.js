@@ -1,13 +1,10 @@
+const string = `
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 *::after,*::before{box-sizing: border-box}
-body{
-    font-size: 100px;
-    background: #FFE600;
-}
 
 #pikachu{
     position: absolute;
@@ -172,4 +169,6 @@ body{
     right: 0;
     top: 50%;
     margin-right: -0.30em;
-}
+}`
+
+export  default string;
