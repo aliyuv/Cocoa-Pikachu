@@ -30,6 +30,18 @@
 		    border: 1px solid red;
 		    overflow-y: auto;
 	    }
+        #content::after{
+          content: '|';
+          animation: blink 1s infinite
+        }
+        @keyframes blink{
+          from{
+            opacity: 0;
+          }
+          to{
+            opacity: 1;
+          }
+        }
 	    #content::-webkit-scrollbar{
 		    display: none;
 	    }
@@ -75,6 +87,6 @@
         </div>
       </div>
     </div>
-    <script src = '/js/test.js' type="module"></script>
+    <script src = 'js/test.js' type="module"></script>
   </body>
 </html>
