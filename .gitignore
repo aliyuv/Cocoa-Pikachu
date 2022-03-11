@@ -7,7 +7,6 @@
 out
 gen
 .parcel-cache/
-dist/
 node_modules/
 
 
