@@ -1,4 +1,4 @@
-import cssStr from './style'
+import cssStr from './style.js'
 const content = document.querySelector("#content");
 const content2 = document.querySelector("#content2");
 const stop = document.querySelector(".stop");
