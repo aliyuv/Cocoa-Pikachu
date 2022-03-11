@@ -10,7 +10,6 @@ body{
 }
 
 #pikachu{
-    border: 1px solid red;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -24,6 +23,7 @@ body{
     background-color:#2e2e2e;
     border: 0.02em solid #000;
     border-radius: 50%;
+
 }
 
 .eye.left,
@@ -42,6 +42,7 @@ body{
     position: absolute;
     top: 0.02em;
     left: 0.1em;
+
 }
 .eye.left{
     left:0;
@@ -50,60 +51,126 @@ body{
     right: 0;
 }
 .nose{
-    border: 0.01em solid #000;
-    background-color: black;
-    border-radius: 10em 2em 2em 0;
-    width: .3em;
-    height: .3em;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%) rotateZ(43deg) ;
-    transform-origin: center;
+    top: 1.5em;
+    margin: 0.38em calc(50% - 0.11em) 0.3em;
+    width: 0;
+    height: 0;
+    z-index: 1;
+    border-top: 0.09em solid black;
+    border-left: 0.11em solid transparent;
+    border-right: 0.11em solid transparent;
+    box-shadow: 0 -0.01em 0 black;
+
 }
-.mouth{
-    width: 2.28em;
-    height: 1.8em;
-    position: relative;
-    top: 2.8em;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    border-radius: 50%;
-}
-.mouth:before,
-.mouth:after{
-    width: 0.8em;
-    height: 0.25em;
-    content: "";
+.nose:before {
+    content: '';
     display: block;
     position: absolute;
-    border: 0.03em solid #000000;
-
+    width: .22em;
+    height: .05em;
+    background: black;
+    border-top-left-radius: .11em .05em;
+    border-top-right-radius: .11em .05em;
+    margin-top: -.14em;
+    margin-left: -.11em;
+    transform-origin: center;
 }
-.mouth:before{
-    left: 0.35em;
-    top: 0.5em;
-    border-bottom-left-radius: 0.6em 0.3em;
-    border-top-style: none;
-    border-right-style: none;
-    transform: rotate(-25deg);
+.nose:hover{
+    animation:nose .23s infinite linear;
 }
-.mouth:after{
-    right: 0.34em;
-    top: 0.5em;
-    border-bottom-right-radius: 0.6em 0.3em;
-    border-top-style: none;
-    border-left-style: none;
-    transform:rotate(25deg) ;
-
+@keyframes nose {
+    0%{transform: rotate(0deg)}
+    33%{transform: rotate(-5deg)}
+    67%{transform: rotate(5deg)}
+    100%{transform: rotate(0deg)}
 }
-.mouth>div{
-    width: 2em;
-    height: 3em;
-    border: 1px solid #000;
+.mouth {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    width: 2.28em;
+    height: 1.8em;
+    margin-top: 2.2em;
+    margin-left: calc(50% - 1.18em);
+    overflow: hidden;
 }
-.face{}
+.mouth:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: .8em;
+    height: .25em;
+    background: #FFE600;
+    border: .03em solid black;
+    border-top: none;
+    border-left: none;
+    right: .31em;
+    top: -.05em;
+    transform:rotate(25deg);
+    border-bottom-right-radius: .6em .3em;
+    box-shadow: 0 -.1em 0 #FFE600, -.05em -.03em 0 #FFE600;
+}
+.mouth:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: .8em;
+    height: .25em;
+    background: #FFE600;
+    border: .03em solid black;
+    border-top: none;
+    border-right: none;
+    left: .35em;
+    top: -.05em;
+    transform:rotate(-25deg);
+    border-bottom-left-radius: .6em .3em;
+    box-shadow: 0 -.1em 0 #FFE600, .05em -.03em 0 #FFE600;
+    z-index: 1;
+}
+.mouth > div {
+    position: absolute;
+    background: #FF485F;
+    width: 2.28em;
+    height: 8em;
+    border: .04em solid black;
+    border-bottom-left-radius: 1.18em 8em;
+    border-bottom-right-radius: 1.18em 8em;
+    margin-top: -6.37em;
+    overflow: hidden;
+}
+.mouth > div:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 1.3em;
+    height: 1em;
+    box-shadow: 0 -.7em 0 #9B000A;
+    bottom: .35em;
+    margin-left: .475em;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+}
+
+
+.face{
+    width: .82em;
+    height: .82em;
+    border: 3px solid #000;
+    position: absolute;
+    border-radius: 50%;
+    margin-top: 0.5em;
+    background-color: #F00;
+}
+
+.face.left{
+    left: 0;
+    top: 50%;
+    margin-left: -0.30em;
+
+}
+
+.face.right{
+    right: 0;
+    top: 50%;
+    margin-right: -0.30em;
+}
+
